@@ -10,7 +10,7 @@ RSpec.feature "Display all artists" do
 
   # When I visit the artists index
   visit artists_path
-  save_and_open_page
+  # save_and_open_page
 
   # Then I should see each artist's name
   expect(page).to have_content("Justin Beiber")
