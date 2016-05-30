@@ -8,7 +8,7 @@ class PlaylistsController < ApplicationController
 
   def create
     @playlist = Playlist.create(name: params[:playlist][:name],
-                             songs_ids: params[:playlist][:song_ids])
+                             song_ids: params[:playlist][:song_ids])
     redirect_to playlist_path(@playlist)
   end
 end
