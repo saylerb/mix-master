@@ -8,7 +8,6 @@ RSpec.feature "Create playlist" do
 
     playlist_name = "Justin's Jams"
 
-    
     # When I visit the playlists path
     visit playlists_path
 
@@ -19,7 +18,6 @@ RSpec.feature "Create playlist" do
     fill_in "Playlist Name", with: playlist_name
 
     # And I select the songs for the playlist
-    #TODO:
     check("song-#{song_one.id}")
     check("song-#{song_three.id}")
    
