@@ -30,8 +30,6 @@ RSpec.feature "Song creation" do
     # And I should see a link to the song artist's individual page
     expect(page).to have_link(artist.name), href: artist_path(artist)
 
-    save_and_open_page
-    
   end
 end
    
