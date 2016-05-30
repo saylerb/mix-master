@@ -31,7 +31,6 @@ gem 'unicorn'
 # gem 'capistrano-rails', group: :development
 
 gem 'rails_12factor', group: :production
-
 gem 'haml'
 
 group :development, :test do
@@ -41,6 +40,8 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 
 end
 
