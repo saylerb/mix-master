@@ -11,4 +11,8 @@ class PlaylistsController < ApplicationController
                              song_ids: params[:playlist][:song_ids])
     redirect_to playlist_path(@playlist)
   end
+
+  def show
+    @playlist = Playlist.find(params[:id])
+  end
 end

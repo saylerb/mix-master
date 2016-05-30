@@ -40,6 +40,8 @@ RSpec.feature "Create playlist" do
       expect(page).to have_link(song_three.title), href: song_path(song_three)
     end
 
+    save_and_open_page
+
   end
 
 end
