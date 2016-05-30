@@ -21,14 +21,16 @@ RSpec.feature "Song creation" do
     # And I click "New song"
     click_on "New Song"
     # And I fill in the title
-    fill_in "Title" with: "Sorry"
+    fill_in "Title", with: "Sorry"
     # And I click "Create Song"
     click_on "Create Song"
     # Then I should see the song name
     expect(page).to have_content("Sorry")
 
     # And I should see a link to the song artist's individual page
-    expect(page).to have_link("Justin Beiber"), href: artist_path(artist)
+    expect(page).to have_link(artist.name), href: artist_path(artist)
+
+    # save_and_open_page
     
   end
 end

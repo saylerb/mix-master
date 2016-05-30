@@ -12,7 +12,7 @@ RSpec.feature "Destroy Artist" do
     artist = Artist.find_by(name: "Justin Beiber")
 
     visit artist_path(artist)
-    save_and_open_page
+    # save_and_open_page
     # And I click on "Delete"
     click_on "Delete"
     # Then I should be back on the artist index page

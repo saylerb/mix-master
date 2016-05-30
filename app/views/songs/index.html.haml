@@ -1,0 +1,7 @@
+%h1 All Songs for Artist
+
+- @artist.songs.each do |song|
+  %ul= song.title
+
+= link_to @artist.name, artist_path(@artist)
+

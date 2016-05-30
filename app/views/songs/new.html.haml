@@ -1,0 +1,12 @@
+%h1 Create New Song
+
+%p 
+  Add a new song for 
+  = @artist.name
+
+= form_for([@artist, @song]) do |f|
+  = f.label :title, "Title"
+  = f.text_field :title
+
+  = f.submit
+
