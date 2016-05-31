@@ -5,11 +5,11 @@ FactoryGirl.define do
   end
 
   sequence :name do |n|
-    "#{n} Artist"
+    "Artist Name #{n}"
   end
 
   sequence :title, ["A", "C", "B"].cycle do |n|
-    "#{n} Title"
+    "Song Title #{n}"
   end
 
   factory :song do
@@ -18,7 +18,7 @@ FactoryGirl.define do
   end
 
   sequence :playlist_name do |n|
-    "Playlist #{n}"
+    "Playlist Name #{n}"
   end
 
   factory :playlist do

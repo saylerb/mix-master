@@ -9,11 +9,24 @@ class PlaylistsController < ApplicationController
 
   def create
     @playlist = Playlist.create(name: params[:playlist][:name],
-                             song_ids: params[:playlist][:song_ids])
+                                song_ids: params[:playlist][:song_ids])
     redirect_to playlist_path(@playlist)
   end
 
   def show
     @playlist = Playlist.find(params[:id])
   end
+  
+  def edit
+    @playlist = Playlist.find(params[:id])
+  end
+
+  def update
+    @playlist = Playlist.find(params[:id])
+    @playlist.update(name: params[:playlist][:name],
+                     song_ids: params[:playlist][:song_ids])
+
+    redirect_to playlist_path(@playlist)
+  end
+
 end

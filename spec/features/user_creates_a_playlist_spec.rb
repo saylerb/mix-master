@@ -37,6 +37,7 @@ RSpec.feature "Create playlist" do
     within("li:last") do
       expect(page).to have_link(song_three.title), href: song_path(song_three)
     end
+    
 
   end
 
